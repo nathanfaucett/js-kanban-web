@@ -1,0 +1,31 @@
+{
+  "app": {
+    "name": "Kanban"
+  },
+  "errors": {
+    "not_found": "404 - Not Found",
+    "confirm_email": "Confirm your email",
+    "confirm_email_desc": "we sent one to %s",
+    "confirm_resend_email": "to resend email click ",
+    "confirm_resend_here": "here",
+    "forms": {
+      "invalid_email": "Invalid Email",
+      "invalid_password": "Invalid Password",
+      "invalid_confirm_password": "Invalid Confirm Password",
+      "invalid_firstname": "Invalid First Name",
+      "locale_not_supported": "Locale not supported"
+    }
+  },
+  "forms": {
+    "sign_in": "Sign in",
+    "sign_up": "Sign up",
+    "sign_up_not_member": "Not a member?",
+    "sign_in_already_member": "Already a member?",
+    "email": "Email",
+    "password": "Password",
+    "confirm_password": "Confirm Password",
+    "firstname": "First name",
+    "lastname": "Last name",
+    "locale": "Locale"
+  }
+}

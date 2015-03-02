@@ -1,0 +1,14 @@
+{
+    "forms": {
+        "sign_in": "Sign in",
+        "sign_up": "Sign up",
+        "sign_up_not_member": "Not a member?",
+        "sign_in_already_member": "Already a member?",
+        "email": "Email",
+        "password": "Password",
+        "confirm_password": "Confirm Password",
+        "firstname": "First name",
+        "lastname": "Last name",
+        "locale": "Locale"
+    }
+}

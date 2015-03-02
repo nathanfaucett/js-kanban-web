@@ -1,0 +1,26 @@
+@import "./variables.less";
+
+@import "native.less";
+@import "create-grid.less";
+
+@import "opacity.less";
+@import "border-radius.less";
+@import "box-shadow.less";
+
+.create-grid(xs, @grid-columns, @grid-xs-width);
+.create-grid(sm, @grid-columns, @grid-sm-width);
+.create-grid(md, @grid-columns, @grid-md-width);
+.create-grid(lg, @grid-columns, @grid-lg-width);
+
+.create-hidden(xs, @grid-xs-width, @grid-sm-width);
+.create-hidden(sm, @grid-sm-width, @grid-md-width);
+.create-hidden(md, @grid-md-width, @grid-lg-width);
+.create-hidden(lg, @grid-lg-width);
+
+.wrap{
+  display: block;
+  position: relative;
+  margin: 0 auto;
+  padding: 0 @wrap-padding;
+  max-width: @wrap-width;
+}

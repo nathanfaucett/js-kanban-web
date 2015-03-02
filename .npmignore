@@ -1,0 +1,8 @@
+node_modules
+npm-debug.log
+dest
+app/index.css
+app/index.html
+app/index.js
+app/js/config.js
+.envrc

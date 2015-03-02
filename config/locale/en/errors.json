@@ -1,0 +1,18 @@
+{
+  "errors": {
+    "not_found": "404 - Not Found",
+
+    "confirm_email": "Confirm your email",
+    "confirm_email_desc": "we sent one to %s",
+    "confirm_resend_email": "to resend email click ",
+    "confirm_resend_here": "here",
+
+    "forms": {
+      "invalid_email": "Invalid Email",
+      "invalid_password": "Invalid Password",
+      "invalid_confirm_password": "Invalid Confirm Password",
+      "invalid_firstname": "Invalid First Name",
+      "locale_not_supported": "Locale not supported"
+    }
+  }
+}
