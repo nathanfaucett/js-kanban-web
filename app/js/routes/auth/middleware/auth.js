@@ -5,7 +5,7 @@ var page = require("page"),
 function auth(ctx, next) {
     var pathname;
 
-    if (!cookies.get("api_token")) {
+    if (!cookies.get("api_key")) {
         pathname = ctx.pathname;
 
         if (pathname === "/sign_up") {

@@ -12,7 +12,7 @@ var SignIn = React.createClass({
     displayName: "SignIn",
 
     contextTypes: {
-        ctx: React.PropTypes.object
+        ctx: React.PropTypes.object.isRequired
     },
 
     getInitialState: function() {

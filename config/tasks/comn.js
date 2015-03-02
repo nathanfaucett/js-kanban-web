@@ -16,7 +16,7 @@ module.exports = function(config) {
     return function(done) {
         compile({
             index: config.paths.js_src,
-            out: config.paths.js_out,
+            out: config.paths.js_out
         }, done);
-    }
+    };
 };

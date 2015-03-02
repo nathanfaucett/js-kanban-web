@@ -1,0 +1,23 @@
+label{
+    color: @black;
+    font-weight:normal;
+    &.required {
+      font-weight:bold;
+    }
+}
+
+input{
+    .kb-border-radius();
+    margin-bottom: 8px;
+    color: @black;
+    background:  @white;
+    border: 1px;
+    border-style: dashed;
+    border-color: @blue;
+    display: block;
+    padding: 8px;
+    width: 100%;
+    &:focus{
+      border-style: solid;
+    }
+}

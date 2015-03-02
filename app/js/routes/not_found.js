@@ -1,20 +1,17 @@
 var React = require("react"),
     HttpError = require("http_error"),
-    PageNotFound = require("../components/page_not_found"),
+    renderNotFound = require("../pages/not_found"),
     app = require("../app");
 
 
 app.router.use(
     function(ctx, next) {
+        console.log(ctx.route);
+
         if (ctx.route) {
             next();
         } else {
-            React.render(
-                React.createElement(PageNotFound, {
-                    ctx: ctx
-                }),
-                app.node
-            );
+            React.render(renderNotFound(ctx), app.node);
             next(new HttpError(404));
         }
     }

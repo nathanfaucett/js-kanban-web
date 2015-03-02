@@ -61,6 +61,7 @@
     "page": "git://github.com/nathanfaucett/page",
     "react": "^0.12.2",
     "request": "git://github.com/nathanfaucett/request",
-    "trim": "git://github.com/nathanfaucett/trim"
+    "trim": "git://github.com/nathanfaucett/trim",
+    "values": "git://github.com/nathanfaucett/values"
   }
 }

@@ -30,10 +30,10 @@ module.exports = function(config) {
             index: config.paths.css_src,
             out: config.paths.css_out,
             less: {
-                compress: false,
+                compress: config.env === "production",
                 optimization: 0,
                 ieCompat: true
             }
         }, done);
-    }
+    };
 };

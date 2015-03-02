@@ -50,7 +50,8 @@ app.init = function() {
         page.reload();
     });
 
-    i18n.setFlatMode(config.flatLocaleMode);
+    i18n.flatMode(config.flatLocaleMode);
+    i18n.throwMissingError(config.throwMissingTranslationError);
     page.html5Mode(config.html5Mode);
 
     page.init();

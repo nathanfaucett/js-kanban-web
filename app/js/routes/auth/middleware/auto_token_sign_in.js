@@ -4,11 +4,11 @@ var page = require("page"),
 
 
 function autoTokenSignIn(ctx, next) {
-    var apiToken = cookies.get("api_token"),
+    var apiKey = cookies.get("api_key"),
         user = UserStore.user;
 
-    if (apiToken && apiToken !== user.api_token) {
-        UserStore.signInWithApiToken(apiToken, function(err) {
+    if (apiKey && apiKey !== user.api_key) {
+        UserStore.signInWithApiToken(apiKey, function(err) {
             if (err) {
                 page.go("/sign_in");
             } else {

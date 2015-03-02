@@ -42,9 +42,9 @@ module.exports = function(config) {
                     return {
                         useLiveReload: config.env !== "production",
                         liveReloadPort: config.liveReloadPort
-                    }
+                    };
                 }
             ]
         }, done);
-    }
+    };
 };

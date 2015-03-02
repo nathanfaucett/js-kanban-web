@@ -12,10 +12,12 @@
 .create-grid(md, @grid-columns, @grid-md-width);
 .create-grid(lg, @grid-columns, @grid-lg-width);
 
+/*
 .create-hidden(xs, @grid-xs-width, @grid-sm-width);
 .create-hidden(sm, @grid-sm-width, @grid-md-width);
 .create-hidden(md, @grid-md-width, @grid-lg-width);
 .create-hidden(lg, @grid-lg-width);
+*/
 
 .wrap{
   display: block;
@@ -24,3 +26,37 @@
   padding: 0 @wrap-padding;
   max-width: @wrap-width;
 }
+
+html, body{
+  font-family: Helvetica,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 1;
+  color: @black;
+  background-color: @light-grey;
+}
+
+a{
+  color: @blue;
+  &:hover{
+    color: @light-blue;
+  }
+}
+
+p{
+  margin-bottom: 8px;
+}
+
+.kb-box-shadow() {
+  .box-shadow(2px, 2px, fadeout(@black, 75%));
+}
+
+.kb-border-radius() {
+  .border-radius(4px);
+}
+
+@import "./auth/index.less";
+@import "./buttons.less";
+@import "./form.less";
+
+@import "./header/index.less";
+@import "./projects/index.less";

@@ -5,6 +5,8 @@ app.router.use(
     require("./middleware/i18n")
 );
 
-require("./auth/index");
+require("./auth");
+require("./projects");
+require("./account");
 
 require("./not_found");

@@ -1,6 +1,9 @@
 {
   "app": {
-    "name": "Kanban"
+    "name": "kanban"
+  },
+  "page": {
+    "projects": "Projects"
   },
   "errors": {
     "not_found": "404 - Not Found",
@@ -27,5 +30,12 @@
     "firstname": "First name",
     "lastname": "Last name",
     "locale": "Locale"
+  },
+  "nav": {
+    "header": {
+      "projects": "Projects",
+      "account": "Account",
+      "sign_out": "Sign out"
+    }
   }
 }

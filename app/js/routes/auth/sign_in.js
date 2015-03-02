@@ -1,17 +1,12 @@
 var React = require("react"),
-    PageSignIn = require("../../components/auth/page_sign_in"),
+    renderSignIn = require("../../pages/auth/sign_in"),
     app = require("../../app");
 
 
-app.router.use(
+app.router.route(
     "/sign_in",
     function(ctx, next) {
-        React.render(
-            React.createElement(PageSignIn, {
-                ctx: ctx
-            }),
-            app.node
-        );
+        React.render(renderSignIn(ctx), app.node);
         ctx.end();
         next();
     }

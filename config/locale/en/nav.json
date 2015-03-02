@@ -1,0 +1,9 @@
+{
+    "nav": {
+        "header": {
+            "projects": "Projects",
+            "account": "Account",
+            "sign_out": "Sign out"
+        }
+    }
+}

@@ -5,6 +5,20 @@ var LayoutNoHeader = React.createClass({
 
     displayName: "LayoutNoHeader",
 
+    propTypes: {
+        ctx: React.PropTypes.object.isRequired
+    },
+
+    childContextTypes: {
+        ctx: React.PropTypes.object
+    },
+
+    getChildContext: function() {
+        return {
+            ctx: this.props.ctx
+        };
+    },
+
     render: function() {
         return (
             React.createElement("div", {
@@ -13,7 +27,7 @@ var LayoutNoHeader = React.createClass({
                 React.createElement("div", {
                         className: "content"
                     },
-                    this.props.children
+                    this.props.render()
                 )
             )
         );

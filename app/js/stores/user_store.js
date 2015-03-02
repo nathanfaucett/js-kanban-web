@@ -21,8 +21,20 @@ var UserStore = new Store(),
 UserStore.consts = UserConsts;
 
 
+var _users = {
+    1: {
+        id: 1,
+        api_key: "249r8hr7f0eh24q07hf780awgf7ds8f72498ry89dchfoud",
+        confirmed: true,
+        email: "nathanfaucett@gmail.com",
+        password: "123456",
+        locale: "en"
+    }
+};
+
+
 UserStore.user = {
-    api_token: null,
+    api_key: null,
     confirmed: false,
     email: null,
     locale: defaultLocale
@@ -76,7 +88,7 @@ function setLocale(value) {
 }
 
 UserStore.isSignedIn = function() {
-    return UserStore.user.api_token !== null;
+    return UserStore.user.api_key !== null;
 };
 
 UserStore.confirmEmail = function(email, expiresAt, token, callback) {
@@ -111,12 +123,12 @@ UserStore.resendConfirmEmail = function(email, callback) {
 function signUserIn(data) {
     var user = UserStore.user;
 
-    user.api_token = data.api_key;
+    user.api_key = data.api_key;
     user.locale = data.locale || defaultLocale;
     user.confirmed = data.confirmed;
     user.email = data.email;
 
-    cookies.set("api_token", data.api_key);
+    cookies.set("api_key", data.api_key);
     cookies.set("locale", user.locale);
     request.defaults.headers["X-Testcloud-Token"] = data.api_key;
 }
@@ -124,18 +136,21 @@ function signUserIn(data) {
 function signUserOut() {
     var user = UserStore.user;
 
-    user.api_token = null;
+    user.api_key = null;
     user.confirmed = false;
     user.email = null;
 
-    cookies.remove("api_token");
+    cookies.remove("api_key");
     delete request.defaults.headers["X-Testcloud-Token"];
 }
 
-UserStore.signInWithApiToken = function(api_token, callback) {
+UserStore.signInWithApiToken = function(api_key, callback) {
+    signUserIn(_users[1]);
+    callback(undefined, _users[1]);
+    /*
     request.get(config.apiUrl + "/sessions", {
         headers: {
-            "X-Testcloud-Token": api_token
+            "X-Testcloud-Token": api_key
         },
         success: function(response) {
             var user = response.data;
@@ -148,9 +163,13 @@ UserStore.signInWithApiToken = function(api_token, callback) {
             callback(response);
         }
     });
+    */
 };
 
 UserStore.signInWithCredentials = function(email, password, callback) {
+    signUserIn(_users[1]);
+    callback(undefined, _users[1]);
+    /*
     request.post(config.apiUrl + "/sessions", {
         email: email,
         password: password
@@ -165,6 +184,7 @@ UserStore.signInWithCredentials = function(email, password, callback) {
             callback(response);
         }
     });
+    */
 };
 
 UserStore.signInWithOneTimeToken = function(email, token, callback) {

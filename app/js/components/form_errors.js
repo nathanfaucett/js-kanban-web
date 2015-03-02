@@ -12,7 +12,7 @@ var FormErrors = React.createClass({
     },
 
     render: function() {
-        var i18n = this.context.ctx.i18n;
+        var i18n = function() {};
 
         return (
             React.createElement("div", {
